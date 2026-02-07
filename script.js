@@ -138,7 +138,7 @@ class TerminalTyping {
         this.commands = [
             {
                 cmd: 'whoami',
-                output: 'Aryan Dubey\nData Analytics & AI Engineer\nTexas Tech University | CS Major | 3.9 GPA'
+                output: 'Aryan Dubey\nData Analytics & ML Engineer\nTexas Tech University | CS Major | 3.9 GPA'
             },
             {
                 cmd: 'ls achievements/',
@@ -543,7 +543,7 @@ class InteractiveTerminal {
 
         this.commands = {
             help: () => this.showHelp(),
-            about: () => 'Aryan Dubey - Data Analytics & AI Engineer\\nTexas Tech University | CS Major | 3.9 GPA\\nPassionate about transforming data into intelligent solutions.',
+            about: () => 'Aryan Dubey - Data Analytics & ML Engineer\\nTexas Tech University | CS Major | 3.9 GPA\\nPassionate about transforming data into intelligent solutions.',
             skills: () => 'Languages: Python, JavaScript, SQL, Java, C++\\nFrameworks: React, Next.js, Node.js, Flask\\nML/AI: TensorFlow, PyTorch, Scikit-learn, NLP\\nCloud: AWS, Azure, Docker, Terraform\\nData: PowerBI, Tableau, Pandas, NumPy',
             projects: () => '1. TempTerra - HackTX 2024 Winner\\n   Predictive Resource Optimization System\\n\\n2. FleetRank - HackWesTX 2024 Winner\\n   Real-Time Fleet Analytics Dashboard\\n\\n3. DocMent - Healthcare AI\\n   AI-Powered Medical Intelligence Platform',
             experience: () => 'IT Student Assistant @ Texas Tech University (2023-Present)\\n- Built AI ticket classification model (5,000+ requests)\\n- Automated workflows reducing IT workload by 95%\\n\\nTech Lead @ CodePath TTU (2023-Present)\\n- Led MERN stack workshops (40+ students)\\n- Built codepathttu.org website',
