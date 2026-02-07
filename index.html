@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Dubey | Data Analytics & AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Terminal Header -->
+    <div class="terminal-header">
+        <div class="terminal-controls">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="terminal-title">aryan@portfolio:~$</div>
+        <nav class="terminal-nav">
+            <a href="#about" class="nav-link">_about</a>
+            <a href="#skills" class="nav-link">_skills</a>
+            <a href="#projects" class="nav-link">_projects</a>
+            <a href="#experience" class="nav-link">_experience</a>
+            <a href="#education" class="nav-link">_education</a>
+            <a href="#contact" class="nav-link">_contact</a>
+            <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+                <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <!-- Default to Sun for Dark Mode (switch to Light) -->
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Hero with Stats Dashboard -->
+    <section class="hero-dashboard">
+        <div class="hero-main">
+            <h1 class="glitch" data-text="ARYAN DUBEY">ARYAN DUBEY</h1>
+            <p class="hero-role">Data Analytics & AI Engineer</p>
+
+        </div>
+    </section>
+
+    <!-- Live Terminal Section -->
+    <section class="terminal-section">
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span class="command" id="terminal-command"></span>
+                <span class="cursor-blink">_</span>
+            </div>
+            <div class="terminal-output" id="terminal-output"></div>
+        </div>
+    </section>
+
+    <!-- Stats Buffer Section -->
+    <section class="stats-buffer">
+        <div class="live-stats">
+            <div class="stat-card">
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Hackathon Wins</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="95">0</div>
+                <div class="stat-label">IT Workload Reduced</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="40">0</div>
+                <div class="stat-label">Students Mentored</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="3.9">0.0</div>
+                <div class="stat-label">GPA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2 class="section-title">ABOUT ME</h2>
+        <div class="about-card">
+            <p class="about-text">
+                Passionate about computers and driven by a curiosity that started at the age of 8, I've been immersed in
+                the world of technology from its early days. As technology has progressed, so has my fascination with
+                how these devices are controlled and programmed to respond to our commands.
+            </p>
+            <p class="about-text">
+                Today, in an era where the world heavily relies on gadgets, I envision a future where technology will
+                streamline and even replace many human efforts. As a dedicated student, I am currently delving deep into
+                the innovative tech world, mastering the art of communicating with binary-controlled computers through
+                fundamental coding languages.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive 3D Skills Constellation -->
+    <section class="skills-constellation" id="skills">
+        <h2 class="section-title">SKILL MATRIX</h2>
+        <div class="constellation-container" id="constellation">
+            <!-- Skills will be dynamically generated -->
+        </div>
+    </section>
+
+    <!-- Detailed Technical Skills Cards -->
+    <section class="technical-skills-section">
+        <h2 class="section-title">TECHNICAL ARSENAL</h2>
+        <div class="technical-skills-card">
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🐍</div>
+                        <h3>Programming & Analytics</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Python (Pandas, NumPy)</li>
+                        <li>Scikit-learn</li>
+                        <li>SQL</li>
+                        <li>Data Structures & Algorithms</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">📊</div>
+                        <h3>Data Visualization & BI</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Tableau</li>
+                        <li>Power BI</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🤖</div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Regression & Classification</li>
+                        <li>Clustering</li>
+                        <li>Predictive Analytics</li>
+                        <li>NLP (Natural Language Processing)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">☁️</div>
+                        <h3>Cloud & Data Management</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>AWS & Azure</li>
+                        <li>Docker & Terraform</li>
+                        <li>MySQL & MongoDB</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Other Tools</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>Jupyter Notebook</li>
+                        <li>Postman & JIRA</li>
+                        <li>MERN Stack</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Project Showcase -->
+    <section class="projects-showcase" id="projects">
+        <h2 class="section-title">FEATURED PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-project="tempterra">
+                <div class="project-header">
+                    <div class="project-badge">🏆 HackTX 2024 Winner</div>
+                    <h3>TempTerra</h3>
+                </div>
+                <p class="project-desc">Predictive Resource Optimization System</p>
+                <div class="project-stats">
+                    <div class="stat"><span class="number">40%</span> Scaling Accuracy</div>
+                    <div class="stat"><span class="number">60%</span> Memory Reduction</div>
+                    <div class="stat"><span class="number">10K+</span> Logs Analyzed</div>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech">Python</span>
+                    <span class="tech">SQL</span>
+                    <span class="tech">Terraform</span>
+                    <span class="tech">AWS</span>
+                </div>
+                <div class="project-glow"></div>
+            </div>
+
+            <div class="project-card" data-project="fleetrank">
+                <div class="project-header">
+                    <div class="project-badge">🏆 HackWesTX 2024 Winner</div>
+                    <h3>FleetRank</h3>
+                </div>
+                <p class="project-desc">Real-Time Fleet Analytics Dashboard</p>
+                <div class="project-stats">
+                    <div class="stat"><span class="number">30%</span> Productivity Boost</div>
+                    <div class="stat"><span class="number">25%</span> Downtime Reduced</div>
+                    <div class="stat"><span class="number">1000+</span> Fleet Records</div>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech">React</span>
+                    <span class="tech">Next.js</span>
+                    <span class="tech">MongoDB</span>
+                    <span class="tech">PowerBI</span>
+                </div>
+                <div class="project-glow"></div>
+            </div>
+
+            <div class="project-card" data-project="docment">
+                <div class="project-header">
+                    <div class="project-badge">🏥 Healthcare AI</div>
+                    <h3>DocMent</h3>
+                </div>
+                <p class="project-desc">AI-Powered Medical Intelligence</p>
+                <div class="project-stats">
+                    <div class="stat"><span class="number">75%</span> Manual Entry Cut</div>
+                    <div class="stat"><span class="number">60%</span> Review Time Saved</div>
+                    <div class="stat"><span class="number">85%</span> Model Accuracy</div>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech">Python</span>
+                    <span class="tech">NLP</span>
+                    <span class="tech">OpenAI</span>
+                    <span class="tech">MERN</span>
+                </div>
+                <div class="project-glow"></div>
+            </div>
+
+            <div class="project-card" data-project="codet">
+                <div class="project-header">
+                    <div class="project-badge">🎓 Educational Platform</div>
+                    <h3>Codet</h3>
+                </div>
+                <p class="project-desc">Official Learning Platform & CMS</p>
+                <div class="project-stats">
+                    <div class="stat"><span class="number">50+</span> Students Impacted</div>
+                    <div class="stat"><span class="number">100%</span> Custom CMS</div>
+                    <div class="stat"><span class="number">Top</span> Tech Community</div>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech">React</span>
+                    <span class="tech">Node.js</span>
+                    <span class="tech">MongoDB</span>
+                    <span class="tech">Express</span>
+                </div>
+                <div class="project-glow"></div>
+            </div>
+
+            <div class="project-card" data-project="power-predictor">
+                <div class="project-header">
+                    <div class="project-badge">⚡ Energy Analytics</div>
+                    <h3>Power Output Predictor</h3>
+                </div>
+                <p class="project-desc">Predictive Energy Generation Model</p>
+                <div class="project-stats">
+                    <div class="stat"><span class="number">0.92</span> R² Accuracy</div>
+                    <div class="stat"><span class="number">6000+</span> Data Points</div>
+                    <div class="stat"><span class="number">AI</span> Regression Model</div>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech">Python</span>
+                    <span class="tech">Scikit-learn</span>
+                    <span class="tech">Pandas</span>
+                    <span class="tech">Matplotlib</span>
+                </div>
+                <div class="project-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-timeline" id="experience">
+        <h2 class="section-title">EXPERIENCE LOG</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2023 - Present</div>
+                <div class="timeline-content">
+                    <h3>IT Student Assistant</h3>
+                    <p class="company">Texas Tech University</p>
+                    <ul>
+                        <li>Built AI ticket classification model analyzing 5,000+ requests</li>
+                        <li>Automated workflows reducing IT workload by 95%</li>
+                        <li>Reduced breach risk by 40% with security strategies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023 - Present</div>
+                <div class="timeline-content">
+                    <h3>Tech Lead (Mentor)</h3>
+                    <p class="company">CodePath TTU</p>
+                    <ul>
+                        <li>Led <strong>Full Stack Development</strong> & <strong>Machine Learning</strong> workshops
+                        </li>
+                        <li>Mentored 50+ students in industry-grade web development</li>
+                        <li>Built full website: <a href="https://codepathttu.org" target="_blank"
+                                style="color:var(--primary-green)">codepathttu.org</a> + CUSTOM CMS</li>
+                        <li>Integrated AI attributes into training curriculum</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">May 2023 - June 2023</div>
+                <div class="timeline-content">
+                    <h3>Fellowship</h3>
+                    <p class="company">Kruu Inc</p>
+                    <ul>
+                        <li>Kickstarted professional journey as an intern and fellow</li>
+                        <li>Contributed to organizational goals in an esteemed environment</li>
+                        <li>Fostered problem-solving skills and team collaboration</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Jan 2023 - Feb 2023</div>
+                <div class="timeline-content">
+                    <h3>Student Intern</h3>
+                    <p class="company">Mindler</p>
+                    <ul>
+                        <li>Upgraded technical skills in Computer Science Engineering context</li>
+                        <li>Collaborated on key projects with high energy and passion</li>
+                        <li>Gained hands-on experience in a professional tech environment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Nov 2022 - Dec 2022</div>
+                <div class="timeline-content">
+                    <h3>Student Intern</h3>
+                    <p class="company">Entrepreneurship Development</p>
+                    <ul>
+                        <li>Acquired crucial skills in entrepreneurship and business development</li>
+                        <li>Qualified among the <strong>Top 100 Interns</strong> for performance</li>
+                        <li>Developed strategic thinking and project execution skills</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 2022 - Jan 2023</div>
+                <div class="timeline-content">
+                    <h3>Delegate</h3>
+                    <p class="company">International Model United Nations (IMUNA)</p>
+                    <ul>
+                        <li>Engaged in global debates with international delegates</li>
+                        <li>Honed public speaking and diplomatic negotiation skills</li>
+                        <li>Participated in IMUN 142.0 conference</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section" id="education">
+        <h2 class="section-title">EDUCATION</h2>
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Texas Tech University</h3>
+                <span class="edu-year">2023 - 2027</span>
+            </div>
+            <p class="edu-degree">Bachelor of Science in Computer Science<br><span class="edu-minor"
+                    style="font-size: 0.9em; color: var(--text-secondary);">Minor in Mathematics</span></p>
+            <div class="edu-details">
+                <div class="detail-item">
+                    <span class="label">GPA:</span>
+                    <span class="value">3.9 / 4.0</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Focus:</span>
+                    <span class="value">Data Analytics, Machine Learning, AI</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>G.D. Sawant Senior & Shri Siddhivinayak Junior College</h3>
+                <span class="edu-year">2021 - 2023</span>
+            </div>
+            <p class="edu-degree">Higher Secondary School<br><span class="edu-minor"
+                    style="font-size: 0.9em; color: var(--text-secondary);">Science Stream</span></p>
+        </div>
+
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Symbiosis School Nashik</h3>
+                <span class="edu-year">2011 - 2021</span>
+            </div>
+            <p class="edu-degree">Secondary School<br><span class="edu-minor"
+                    style="font-size: 0.9em; color: var(--text-secondary);">General Education</span></p>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications-section">
+        <h2 class="section-title">ACHIEVEMENTS</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon">🏆</div>
+                <h4>HackTX 2024</h4>
+                <p>Winner - TempTerra</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🏆</div>
+                <h4>HackWesTX 2024</h4>
+                <p>Winner - FleetRank</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🥇</div>
+                <h4>Intl. Maths Olympiad</h4>
+                <p>Distinction</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🎓</div>
+                <h4>Presidential Merit</h4>
+                <p>Scholarship Recipient</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🎓</div>
+                <h4>TTU Alumni Assoc.</h4>
+                <p>Scholarship Recipient</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h4>Intro to Programming</h4>
+                <p>Certification</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">CONNECT</h2>
+        <div class="contact-grid">
+            <a href="https://github.com/IamAryanDubey" target="_blank" class="contact-card">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </div>
+                <div class="contact-label">GitHub</div>
+            </a>
+            <a href="https://www.linkedin.com/in/thisisaryandubey/" target="_blank" class="contact-card">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </div>
+                <div class="contact-label">LinkedIn</div>
+            </a>
+            <a href="mailto:ardubey@ttu.edu" class="contact-card">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+                <div class="contact-label">Email</div>
+            </a>
+        </div>
+        <div class="footer-info">
+            <p>📍 Lubbock, TX 79401 | 📱 +1(806)758-2024</p>
+            <p class="footer-tagline">Building intelligent solutions, one line of code at a time.</p>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal -->
+    <div class="interactive-terminal" id="interactive-terminal">
+        <div class="terminal-bar">
+            <div class="terminal-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="terminal-bar-title">Interactive Terminal - Type 'help' for commands</div>
+            <button class="terminal-toggle" id="terminal-toggle">▲</button>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <div class="terminal-history" id="terminal-history">
+                <div class="terminal-welcome">Welcome to Aryan's Portfolio Terminal! Type 'help' to see available
+                    commands.</div>
+            </div>
+            <div class="terminal-input-line">
+                <span class="terminal-prompt">visitor@aryan:~$</span>
+                <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false"
+                    placeholder="Type a command...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <div class="project-badge" id="modal-badge"></div>
+                <h2 id="modal-title"></h2>
+            </div>
+            <div class="tech-stack" id="modal-tech-stack"></div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Purpose</h3>
+                    <p id="modal-purpose"></p>
+                </div>
+                <div class="modal-section">
+                    <h3>What it Does</h3>
+                    <p id="modal-functionality"></p>
+                </div>
+                <div class="modal-section">
+                    <h3>Under the Hood</h3>
+                    <p id="modal-technical"></p>
+                </div>
+                <div class="modal-section">
+                    <h3>Quantified Impact</h3>
+                    <ul id="modal-impact" class="modal-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Matrix Background Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
