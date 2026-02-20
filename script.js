@@ -730,6 +730,19 @@ class ProjectDetailsModal {
         };
 
         this.projectData = {
+            'healthcare-pipeline': {
+                title: 'Healthcare Data Pipeline',
+                badge: 'Work-TTUS',
+                techStack: ['Python', 'REST APIs', 'HIPAA', 'JSON', 'Data Pipeline'],
+                purpose: 'To integrate WestFax API with Athena EHR for secure, automated document ingestion.',
+                functionality: 'Engineered a secure ETL pipeline that automatically processes daily medical records, ensuring they are correctly and securely uploaded to the electronic health record system.',
+                technical: 'Developed custom scripts using Python to process JSON data and interact with REST APIs, ensuring 100% HIPAA-compliant data encryption.',
+                impact: [
+                    'Engineered a secure ETL pipeline to integrate WestFax API with Athena EHR.',
+                    'Developed custom scripts to process 500+ daily medical records with 100% HIPAA-compliant encryption.',
+                    'Optimized API interoperability, reducing clinical data entry time by 40% through real-time status synchronization.'
+                ]
+            },
             'tempterra': {
                 title: 'TempTerra',
                 badge: '🏆 HackTX 2024 Winner',
