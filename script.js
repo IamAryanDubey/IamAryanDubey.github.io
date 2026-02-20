@@ -865,6 +865,41 @@ class ProjectDetailsModal {
 }
 
 // ============================================
+// MOBILE MENU
+// ============================================
+class MobileMenu {
+    constructor() {
+        this.hamburger = document.getElementById('hamburger-menu');
+        this.nav = document.getElementById('terminal-nav');
+        this.navLinks = document.querySelectorAll('.nav-link');
+
+        this.init();
+    }
+
+    init() {
+        if (!this.hamburger || !this.nav) return;
+
+        this.hamburger.addEventListener('click', () => {
+            this.toggleMenu();
+        });
+
+        // Close menu when a link is clicked
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (this.nav.classList.contains('active')) {
+                    this.toggleMenu();
+                }
+            });
+        });
+    }
+
+    toggleMenu() {
+        this.hamburger.classList.toggle('active');
+        this.nav.classList.toggle('active');
+    }
+}
+
+// ============================================
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -910,6 +945,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initialize Project Details Modal
         new ProjectDetailsModal();
+
+        // Initialize Mobile Menu
+        new MobileMenu();
 
         console.log('Portfolio loaded!');
     } catch (error) {

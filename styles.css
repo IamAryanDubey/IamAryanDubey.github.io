@@ -1306,10 +1306,72 @@ body {
   left: -10px;
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 3px;
+  background: var(--primary-green);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* Hamburger active state */
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
 @media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+    margin-left: auto;
+  }
+
   .terminal-nav {
-    display: none;
-    /* Hide on mobile for now, or implement hamburger */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--primary-green);
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .terminal-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
